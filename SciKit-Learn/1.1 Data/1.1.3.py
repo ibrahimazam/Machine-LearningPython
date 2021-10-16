@@ -3,7 +3,6 @@ from sklearn.datasets import load_boston
 #----------------------------------------------------
 
 #load boston data
-
 BostonData = load_boston()
 
 #X Data

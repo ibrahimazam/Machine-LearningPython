@@ -24,11 +24,11 @@ import pandas as pd
 import numpy as np
 
 # Define the dataset
-x=  np.array([2.4,5.0,1.5,3.8,8.7,3.6,1.2,8.1,2.5,5,1.6,1.6,2.4,3.9,5.4])
-y = np.array([2.1,4.7,1.7,3.6,8.7,3.2,1.0,8.0,2.4,6,1.1,1.3,2.4,3.9,4.8])
+x=  np.array([1,2,2,3,4,5,5])
+y = np.array([7,8,7,9,11,10,12])
 n = np.size(x)
-experience = x.reshape(1,-1) #Independent Variable.
-salary = y.reshape(1,-1) #Dependent Variable.
+experience = x #Independent Variable.
+salary = y #Dependent Variable.
 
 # print(experience)
 # print(salary)
@@ -49,8 +49,8 @@ plt.show()
 # Update the values of a0 and a1.
 
 #initialize the parameters
-a0 = 0                  # Intercept
-a1 = 0                  # Slop
+a0 = 5                  # Intercept Theta 0 
+a1 = 2                  # Slop Theta 1
 lr = 0.0001             # Learning rate
 iterations = 1000       # Number of iterations
 error = []              # Error array to calculate cost for each iterations.
