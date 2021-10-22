@@ -2,7 +2,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-
+# Slash \ 
 #read data
 path = 'ex1data1.txt'
 data = pd.read_csv(path, header=None, names=['Population', 'Profit'])
@@ -18,14 +18,14 @@ data.plot(kind='scatter', x='Population', y='Profit', figsize=(4,4))
 #=========================================================================
 
 # adding a new column called ones before the data
-data.insert(0, 'Ones', 1)
-print('new data = \n' ,data.head(10) )
+data.insert(0, 'Ones', 1) # insert add value 0 is location ones column name 1 is the values 
+print('new data = \n' ,data.head(10) ) # will add the colmun in next row
 print('**************************************')
 
 
 # separate X (training data) from y (target variable)
-cols = data.shape[1]
-X = data.iloc[:,0:cols-1]
+cols = data.shape[1] # the Shape related on diminsen 
+X = data.iloc[:,0:cols-1] # the X is input and should be in capital : all rows from col 0 and - last col
 y = data.iloc[:,cols-1:cols]
 
 print('**************************************')
@@ -48,12 +48,13 @@ print('y \n',y)
 print('y.shape = ' , y.shape)
 print('**************************************')
 
+
 #=========================================================================
 # cost function
 def computeCost(X, y, theta):
     z = np.power(((X * theta.T) - y), 2)
-#    print('z \n',z)
-#    print('m ' ,len(X))
+   # print('z \n',z)
+   # print('m ' ,len(X))
     return np.sum(z) / (2 * len(X))
 
 print('computeCost(X, y, theta) = ' , computeCost(X, y, theta))
