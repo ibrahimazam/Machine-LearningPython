@@ -16,12 +16,14 @@ print(data.describe())
 positive = data[data['Admitted'].isin([1])]
 negative = data[data['Admitted'].isin([0])]
 
-# print('Admitted Student \n ',positive )
-# print('Admitted negative \n ',negative )
+#  print('Admitted Student \n ',positive )
+#  print('Admitted negative \n ',negative )
 
 fig, ax = plt.subplots(figsize=(5,5))
-ax.scatter(positive['Exam 1'], positive['Exam 2'], s=50, c='b', marker='o', label='Admitted')
-ax.scatter(negative['Exam 1'], negative['Exam 2'], s=50, c='r', marker='x', label='Not Admitted')
+ax.scatter(positive['Exam 1'], positive['Exam 2'], s=50, 
+c='b', marker='o', label='Admitted')
+ax.scatter(negative['Exam 1'], negative['Exam 2'], 
+s=50, c='r', marker='x', label='Not Admitted')
 
 ax.legend()
 ax.set_xlabel('Exam 1 Score')

@@ -12,7 +12,6 @@ pca.fit(X)
 print(pca.explained_variance_ratio_)
 print(pca.singular_values_)
 
-
 pca = PCA(n_components=1, svd_solver='arpack')
 pca.fit(X)
 print(pca.explained_variance_ratio_)

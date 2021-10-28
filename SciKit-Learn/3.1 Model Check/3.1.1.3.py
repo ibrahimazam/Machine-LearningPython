@@ -4,6 +4,7 @@ from sklearn.model_selection import cross_validate
 diabetes = datasets.load_diabetes()
 X = diabetes.data[:150]
 y = diabetes.target[:150]
+
 reg= linear_model.LinearRegression()
 # CV Came from k folds 
 # we split data into train and test sets 
