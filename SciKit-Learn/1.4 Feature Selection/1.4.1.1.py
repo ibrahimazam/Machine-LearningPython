@@ -23,6 +23,7 @@ y = BreastData.target
 #----------------------------------------------------
 #Feature Selection by Percentile
 #print('Original X Shape is ' , X.shape)
+# attribute
 FeatureSelection = SelectPercentile(score_func = chi2, percentile=20) # score_func can = f_classif
 X = FeatureSelection.fit_transform(X, y)
 

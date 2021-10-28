@@ -1,6 +1,7 @@
 #Import Libraries
 from sklearn.datasets import load_boston
 from sklearn.linear_model import SGDRegressor
+from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import cross_validate
 #----------------------------------------------------
 
@@ -14,6 +15,8 @@ X = BostonData.data
 #y Data
 y = BostonData.target
 
+
+#LRModel = LinearRegression()
 #----------------------------------------------------
 #Applying SGDRegressor Model 
 
@@ -36,7 +39,7 @@ print('Train Score Value : ', CrossValidateValues1['train_score'])
 print('Test Score Value : ', CrossValidateValues1['test_score'])
 print('Fit Time : ', CrossValidateValues1['fit_time'])
 print('Score Time : ', CrossValidateValues1['score_time'])
-print('Train MSE Value : ', CrossValidateValues2['train_neg_mean_squared_error'])
-print('Test MSE Value : ', CrossValidateValues2['test_neg_mean_squared_error'])
-print('Train R2 Value : ', CrossValidateValues2['train_r2'])
+#print('Train MSE Value : ', CrossValidateValues2['train_neg_mean_squared_error'])
+#print('Test MSE Value : ', CrossValidateValues2['test_neg_mean_squared_error'])
+#print('Train R2 Value : ', CrossValidateValues2['train_r2'])
 print('Test R2 Value : ', CrossValidateValues2['test_r2'])

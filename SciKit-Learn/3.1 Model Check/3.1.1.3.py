@@ -5,7 +5,12 @@ diabetes = datasets.load_diabetes()
 X = diabetes.data[:150]
 y = diabetes.target[:150]
 reg= linear_model.LinearRegression()
-
+# CV Came from k folds 
+# we split data into train and test sets 
+# 60 training 
+# 20 CV - It used for tunine hyperparameters  
+# 20 Test 
+# 
 cv_results = cross_validate(reg, X, y, cv=3,return_train_score=False)
 
 
